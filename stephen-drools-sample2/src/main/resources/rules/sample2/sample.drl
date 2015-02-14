@@ -1,0 +1,10 @@
+package au.com.stephen.drools.rules.sample2
+
+import au.com.stephen.drools.rules.model.Message;
+
+rule R2 when
+   $msg : Message( code == 'Test2' )
+then
+	System.out.println('test msg2 recvd');
+	$msg.setResult("Done2");
+end

@@ -1,0 +1,10 @@
+package au.com.stephen.drools.rules.sample3
+
+import au.com.stephen.drools.rules.model.CustomMessage;
+
+rule R2 when
+   $msg : CustomMessage( code == 'Test' )
+then
+	System.out.println('test CustomMessage recvd');
+	$msg.setResult("Done CustomMessage");
+end

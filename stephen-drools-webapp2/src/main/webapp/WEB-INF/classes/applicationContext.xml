@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:kie="http://drools.org/schema/kie-spring"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                          http://drools.org/schema/kie-spring http://drools.org/schema/kie-spring.xsd">
+
+	<bean id="agendaListener" class="org.kie.api.event.rule.DefaultAgendaEventListener" />
+	<!-- <bean id="processRtListener" class="org.kie.api.event.process.DefaultProcessEventListener" 
+		/> -->
+	<bean id="rtListener" class="org.kie.api.event.rule.DefaultRuleRuntimeEventListener" />
+
+	<kie:kmodule id="sampleKmodule">
+		<kie:kbase name="sample1" packages="rules.sample1">
+			<kie:ksession name="ksession1" type="stateful">
+				<kie:agendaEventListener ref="agendaListener" />
+				<!-- <kie:processEventListener ref="processRtListener" /> -->
+				<kie:ruleRuntimeEventListener ref="rtListener" />
+				<kie:consoleLogger />
+			</kie:ksession>
+		</kie:kbase>
+		<kie:kbase name="sample2" includes="sample1" packages="rules.sample2">
+			<kie:ksession name="ksession2" type="stateful">
+				<kie:consoleLogger />
+			</kie:ksession>
+		</kie:kbase>
+		<kie:kbase name="sample3" packages="rules.sample3">
+			<kie:ksession name="ksession3" type="stateful">
+				<kie:consoleLogger />
+			</kie:ksession>
+		</kie:kbase>
+	</kie:kmodule>
+
+	<bean id="kiePostProcessor" class="org.kie.spring.KModuleBeanFactoryPostProcessor" />
+
+	<bean id="testMessage" class="au.com.stephen.drools.rules.model.Message">
+		<property name="code" value="Test" />
+	</bean>
+	<bean id="test2Message" class="au.com.stephen.drools.rules.model.Message">
+		<property name="code" value="Test2" />
+	</bean>
+
+	<bean id="ruleService" class="au.com.stephen.drools.sample2.RuleService" />
+</beans>
