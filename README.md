@@ -21,20 +21,19 @@ This sample project shows how to use drools using kie compiler and kie spring.
 # Run Web App
 
 1. Install
-```
- cd <project directory>
- mvn clean install
-```
+  ```
+   cd <project directory>
+   mvn clean install
+  ```
 2. Go to the directory of the web application you want to run
-```
- # runs kie-webapp-with-rule-module   
- cd <project directory>/kie-webapp-with-rule-module
- # runs kie-webapp-with-no-rule-module
- cd <project directory>/kie-webapp-with-no-rule-module
- mvn jetty:run
-```
-3. Open web browser using url http://localhost:8080/<web app artifact name>
- Example:
+  ```
+   # runs kie-webapp-with-rule-module   
+   cd <project directory>/kie-webapp-with-rule-module
+   # runs kie-webapp-with-no-rule-module
+   cd <project directory>/kie-webapp-with-no-rule-module
+   mvn jetty:run
+  ```
+3. Open web browser using url http://localhost:8080/<web app artifact name>. Example:
    * http://localhost:8080/kie-webapp-with-rule-module
    * http://localhost:8080/kie-webapp-with-no-rule-module
     
