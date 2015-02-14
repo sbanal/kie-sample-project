@@ -10,6 +10,15 @@
     <version>1.0.0-SNAPSHOT</version>
     <name>kie-sample-project</name>
     <description>Main project pom of the Kie Sample web application project</description>
+
+
+    <licenses>
+  	<license>
+    		<name>Apache License, Version 2.0</name>
+    		<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    		<distribution>repo</distribution>
+  	</license>
+    </licenses>
 	
     <properties>
 	<kie.version>6.1.0.Final</kie.version> 
