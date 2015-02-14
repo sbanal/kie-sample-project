@@ -34,9 +34,9 @@ This sample project shows how to use drools using kie compiler and kie spring.
    cd <project directory>/kie-webapp-with-no-rule-module
    mvn jetty:run
   ```
-##### Open web browser using url http://localhost:8080/<web app artifact name>. Example:
-   * [kie-webapp-with-rule-module](http://localhost:8080/kie-webapp-with-rule-module)
-   * [kie-webapp-with-no-rule-module](http://localhost:8080/kie-webapp-with-no-rule-module)
+##### Open web browser using url http://localhost:8080/<web app artifact name>/SampleServlet?rule=[1|2|3]&code=Test. Example:
+   * [kie-webapp-with-rule-module](http://localhost:8080/kie-webapp-with-rule-module/SampleServlet?rule=1&code=Test&test)
+   * [kie-webapp-with-no-rule-module](http://localhost:8080/kie-webapp-with-no-rule-module/SampleServlet?rule=2&code=Test2)
     
   
  
