@@ -1,20 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>au.com.stephen.drools.sample2</groupId>
-	<artifactId>stephen-drools-sample2</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>stephen-drools-sample2</name>
-	<description>test</description>
-	<packaging>kjar</packaging>
 
-	<repositories>
-		<repository>
-			<id>jboss</id>
-			<name>jboss</name>
-			<url>http://repository.jboss.org/nexus/content/groups/public</url>
-		</repository>
-	</repositories>
+	<parent>
+    		<groupId>com.github.sbanal.kie.sample.project</groupId>
+    		<artifactId>kie-sample-project</artifactId>
+    		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>kie-rules-module3</artifactId>
+	<name>kie-rules-module3</name>
+	<description>Example Kie rules module with no dependencies</description>
+	<packaging>kjar</packaging>
 
 	<dependencies>
 		<dependency>
