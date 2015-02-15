@@ -7,7 +7,7 @@ This sample project shows how to use drools using kie compiler and kie spring.
 ## Project descriptions
 * kie-sample-project ................................. Parent Project
 * kie-rules-module1 .................................. Maven artifact which contiains pre-compiled rules
-* kie-rules-module2 .................................. Maven artifact which contiains pre-compiled rules and depends * on kie-rules-module1 rules
+* kie-rules-module2 .................................. Maven artifact which contiains pre-compiled rules and depends on kie-rules-module1 rules
 * kie-rules-module3 .................................. Maven artifact which contiains pre-compiled rules
 * kie-webapp-with-rule-module ........................ Web Application which uses kie-rules-modules[1|2|3]
 * kie-webapp-with-no-rule-module ..................... Web Application which uses kie-spring API (does not use pre-compiled rules)
