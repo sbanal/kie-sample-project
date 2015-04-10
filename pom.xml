@@ -95,11 +95,6 @@
 				<version>${kie.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.kie</groupId>
-				<artifactId>kie-ci</artifactId>
-				<version>${kie.version}</version>
-			</dependency>
-			<dependency>
 				<groupId>org.drools</groupId>
 				<artifactId>drools-compiler</artifactId>
 				<version>${kie.version}</version>

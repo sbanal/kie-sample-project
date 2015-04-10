@@ -7,6 +7,7 @@ import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 
+import au.com.stephen.drools.helper.Helper;
 import au.com.stephen.drools.rules.model.Message;
 
 public class KieTest {
@@ -18,6 +19,7 @@ public class KieTest {
         KieSession kSession = kContainer.newKieSession("ksession1");
         Message msg = new Message();
         msg.setCode("Test");
+	kSession.setGlobal("helper", new Helper());
         kSession.insert(msg);
         int rules = kSession.fireAllRules();
         assertEquals(1, rules);

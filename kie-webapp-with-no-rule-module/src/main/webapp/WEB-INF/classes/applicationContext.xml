@@ -13,7 +13,6 @@
 		<kie:kbase name="sample1" packages="rules.sample1">
 			<kie:ksession name="ksession1" type="stateful">
 				<kie:agendaEventListener ref="agendaListener" />
-				<!-- <kie:processEventListener ref="processRtListener" /> -->
 				<kie:ruleRuntimeEventListener ref="rtListener" />
 				<kie:consoleLogger />
 			</kie:ksession>
@@ -29,7 +28,7 @@
 			</kie:ksession>
 		</kie:kbase>
 	</kie:kmodule>
-
+	
 	<bean id="kiePostProcessor" class="org.kie.spring.KModuleBeanFactoryPostProcessor" />
 
 	<bean id="testMessage" class="au.com.stephen.drools.rules.model.Message">

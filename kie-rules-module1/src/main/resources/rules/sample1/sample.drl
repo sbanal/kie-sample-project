@@ -1,10 +1,11 @@
 package au.com.stephen.drools.rules.sample1
 
 import au.com.stephen.drools.rules.model.Message;
+global au.com.stephen.drools.helper.Helper helper;
 
 rule R1 when
    $msg : Message( code == 'Test' )
 then
-	System.out.println('test msg recvd');
+	helper.print('test msg recvd');
 	$msg.setResult("Done");
 end

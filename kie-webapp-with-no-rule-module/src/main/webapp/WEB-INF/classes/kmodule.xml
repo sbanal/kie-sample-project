@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+		<kbase name="sample1" packages="rules.sample1">
+			<ksession name="ksession1" type="stateful">
+				<agendaEventListener ref="agendaListener" />
+				<ruleRuntimeEventListener ref="rtListener" />
+				<consoleLogger />
+			</ksession>
+		</kbase>
+		<kbase name="sample2" includes="sample1" packages="rules.sample2">
+			<ksession name="ksession2" type="stateful">
+				<consoleLogger />
+			</ksession>
+		</kbase>
+		<kbase name="sample3" packages="rules.sample3">
+			<ksession name="ksession3" type="stateful">
+				<consoleLogger />
+			</ksession>
+		</kbase>
+</kmodule>
