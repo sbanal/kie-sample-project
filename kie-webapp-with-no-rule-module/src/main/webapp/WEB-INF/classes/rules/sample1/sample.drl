@@ -5,6 +5,6 @@ global au.com.stephen.drools.helper.Helper helper;
 rule R1 when
    $msg : Message( code == 'Test' )
 then
-	helper.println('test msg recvd');
+	helper.print('test msg recvd');
 	$msg.setResult("Done");
 end

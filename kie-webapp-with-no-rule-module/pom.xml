@@ -5,6 +5,7 @@
 	<artifactId>kie-webapp-with-no-rule-module</artifactId>
 	<packaging>war</packaging>
 	<name>kie-webapp-with-no-rule-module</name>
+	<version>1.0.1-SNAPSHOT</version>
 	<description>Example Web application using Kie rules using kie-spring api</description>
 
 	<parent>

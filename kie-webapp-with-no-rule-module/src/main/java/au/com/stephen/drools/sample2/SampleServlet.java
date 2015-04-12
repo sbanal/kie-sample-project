@@ -46,19 +46,21 @@ public class SampleServlet extends HttpServlet {
 		
 		String ruleId = request.getParameter("rule");
 		String code = request.getParameter("code");
-
-		System.out.println("Request recvd [ruleId=" + ruleId + ",code=" + code + "]");
+		String message = request.getParameter("msg");
+		System.out.println("Request recvd [ruleId=" + ruleId + ",code=" + code + ",msg=" + message + "]");
 		
 		int rules = 0;
 		String result = null;
 		if (ruleId.equals("3")) {
 			CustomMessage msg = new CustomMessage();
 			msg.setCode(code);
+			msg.setMessage(message);
 			rules = ruleService.process(ruleId, msg);
 			result = msg.getResult();
 		} else {
 			Message msg = new Message();
 			msg.setCode(code);
+			msg.setMessage(message);
 			rules = ruleService.process(ruleId, msg);
 			result = msg.getResult();
 		}
